@@ -7,11 +7,6 @@ import jakarta.validation.constraints.Size;
 
 import java.util.UUID;
 
-/**
- * Data Transfer Object (DTO) for User.
- * Used to transfer user-related data safely.
- */
-
 public class UserDto {
     
     private UUID userId; 

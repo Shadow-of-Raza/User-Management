@@ -5,7 +5,6 @@ import com.example.mahaswayam.dto.UserDto;
 import com.example.mahaswayam.model.User;
 import com.example.mahaswayam.repository.UserRepository;
 import com.example.mahaswayam.service.UserService;
-import com.example.mahaswayam.service.UserServiceImpl;
 
 import jakarta.validation.Valid;
 
@@ -130,7 +129,7 @@ public class UserController {
         }
 
         logger.info("User logged in successfully: {}", user.getUsername());
-        return ResponseEntity.ok("Login successful"); // Replace with JWT if implemented
+        return ResponseEntity.ok("Login successful");
     }
 
 }

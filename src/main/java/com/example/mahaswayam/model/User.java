@@ -17,10 +17,6 @@ import org.hibernate.annotations.UuidGenerator;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-/**
- * User entity representing system users with various attributes.
- */
-
 @Entity
 @Table(name = "users")
 public class User {

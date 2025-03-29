@@ -28,7 +28,6 @@ public class UserServiceImpl implements UserService {
     public UserDto createUser(UserDto userDto, String userTypeName) {
         User user = mapToEntity(userDto);
 
-        // Fetch UserType from the database
         UserType userType = userTypeRepository.findByUserTypeName(userTypeName);
         if (userType == null) {
             throw new RuntimeException("Invalid userTypeName: " + userTypeName);
@@ -77,7 +76,6 @@ public class UserServiceImpl implements UserService {
             user.setPincode(userDto.getPincode());
             user.setProfilePictureUrl(userDto.getProfilePictureUrl());
 
-            // Update user type if provided
             if (userDto.getUserTypeName() != null) {
                 UserType userType = userTypeRepository.findByUserTypeName(userDto.getUserTypeName());
                 user.setUserType(userType);
